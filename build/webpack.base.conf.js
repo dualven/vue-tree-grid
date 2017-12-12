@@ -32,7 +32,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        // loader: 'babel',
+		loader: 'babel-loader',
+          options: {
+             presets: ['es2015']
+          },
         include: projectRoot,
         exclude: /node_modules/
       },
